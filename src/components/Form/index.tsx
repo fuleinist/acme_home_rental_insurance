@@ -5,6 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Button, TextField } from '@mui/material'
 import LoadingButton from '@mui/lab/LoadingButton'
 import { AddressField } from '../AddressField'
+import { DateField } from '../DateField'
 import { Controller, FormProvider, useForm } from 'react-hook-form'
 
 export type FieldType = 'text' | 'address' | 'date' | 'email'
@@ -56,6 +57,7 @@ export const FormWithHook: React.FC<FormWithHookProps> = ({
         {Object.entries(fields).map(([key, props]) => {
           const inputFieldByType = {
             address: AddressField,
+            date: DateField,
           }
           const InputField = inputFieldByType[props.type] || TextField
           return (
@@ -68,6 +70,7 @@ export const FormWithHook: React.FC<FormWithHookProps> = ({
                   <div className="field">
                     <InputField
                       variant="standard"
+                      fullWidth
                       label={props.label}
                       error={!!error}
                       helperText={error}
