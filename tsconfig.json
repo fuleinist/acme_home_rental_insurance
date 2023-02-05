@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "target": "es6",
+    "lib": [
+      "es2019",
+      "DOM",
+      "ES6",
+      "DOM.Iterable",
+      "ScriptHost"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "moduleResolution": "node",
+    "declaration": false,
+    "sourceMap": true,
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": []
+}
